@@ -1,0 +1,109 @@
+object Form1: TForm1
+  Left = 642
+  Height = 400
+  Top = 311
+  Width = 663
+  ActiveControl = SpinEditEx1
+  Caption = 'Two''s Complement'
+  ClientHeight = 400
+  ClientWidth = 663
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object Button1: TButton
+    Left = 8
+    Height = 50
+    Top = 160
+    Width = 646
+    Caption = '2''er komplement Rechnen'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 15
+    Top = 64
+    Width = 164
+    Caption = 'Eine Ganzzahl eingeben (0-255)'
+    ParentColor = False
+  end
+  object SpinEditEx1: TSpinEditEx
+    Left = 243
+    Height = 23
+    Top = 64
+    Width = 109
+    MaxLength = 0
+    TabOrder = 1
+    NullValue = 0
+    Value = 9
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 15
+    Top = 96
+    Width = 108
+    Caption = 'Bitfolge der Zahl ist: '
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 15
+    Top = 216
+    Width = 157
+    Caption = '2''er komplement der Zahl ist: '
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 75
+    Top = 312
+    Width = 360
+    Caption = '1. Fange bei der rechten Stelle (niedrigstwertiges Bit) an.'#13#10'2.1. Wenn diese Stelle eine 0 ist, schreibe eine 0 und gehe zu Punkt 3;'#13#10'2.2. Wenn diese Stelle eine 1 ist, schreibe eine 1 und gehe zu Punkt 4.'#13#10'3. Gehe ein Zeichen nach links und wiederhole Punkt 2.'#13#10'4. Invertiere alle restlichen Stellen bis zum höchstwertigen Bit.'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 16
+    Height = 15
+    Top = 272
+    Width = 214
+    Caption = '2''er komplement der Zahl in dezimal ist: '
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 256
+    Height = 15
+    Top = 272
+    Width = 6
+    Alignment = taRightJustify
+    Caption = '0'
+    ParentColor = False
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 8
+    Height = 43
+    Top = 12
+    Width = 267
+    AutoFill = True
+    Caption = 'Die Bitbreite bestimmen'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 4
+    ClientHeight = 23
+    ClientWidth = 263
+    Columns = 4
+    ItemIndex = 0
+    Items.Strings = (
+      '4 Bit'
+      '8 Bit'
+      '16 Bit'
+      '32 Bit'
+    )
+    OnSelectionChanged = RadioGroup1SelectionChanged
+    TabOrder = 2
+  end
+end
